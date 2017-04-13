@@ -58,3 +58,27 @@ This work with hotfix/* , release/*, tags/*
     # Or
     $ git-nv-check -v
 ```
+
+## Use in your own projects
+
+### Install
+
+```bash
+    $ npm i --save git-npm-version-checker
+    # Or
+    $ yarn git-npm-version-checker
+```
+
+### Use
+
+```js
+const GitNpmVersionChecker = require('git-npm-version-checker');
+
+new GitNpmVersionChecker({
+  fixVersion: true,   // Automatically fix package.json version - Default to false 
+  verbose   : true    // Add more verbosity - Default to false 
+})
+.run()
+.then(() => console.log('Version check passed'))
+.catch(error => console.error('Version check failed: ', error));
+```
