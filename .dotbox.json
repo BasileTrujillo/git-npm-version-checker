@@ -1,0 +1,61 @@
+{
+  "verbose": true,
+
+  "build": {
+    "async": true,
+    "tasks": [
+      {
+        "plugin": "plato",
+        "blocking": false,
+        "eslintrcPath": ".eslintrc.json",
+        "targets": [
+          "index.js",
+          "cli.js",
+          "lib"
+        ]
+      },
+      {
+        "plugin": "jsdoc",
+        "blocking": false,
+        "configFilePath": "./jsdoc.conf.json",
+        "templatePath": "./node_modules/ink-docstrap/template",
+        "readmePath": "./README.md",
+        "targets": [
+          "index.js",
+          "cli.js",
+          "lib"
+        ]
+      }
+    ]
+  },
+
+  "test": {
+    "tasks": [
+      {
+        "plugin": "mocha",
+        "useNyc": true,
+        "nycReporters": [
+          "text-summary",
+          "html"
+        ]
+      }
+    ]
+  },
+
+  "lint": {
+    "tasks": [
+      {
+        "plugin": "nsp",
+        "blocking": false
+      },
+      {
+        "plugin": "eslint",
+        "targets": [
+          "index.js",
+          "cli.js",
+          "lib"
+        ]
+      }
+    ]
+  }
+}
