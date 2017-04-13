@@ -21,7 +21,7 @@ stages:
 ###################################
 
 ############ CI ############
-test:nodejs-latest:
+uTests:node-latest:
   <<: *test_definition
   image: node:latest
   artifacts:
@@ -29,15 +29,15 @@ test:nodejs-latest:
     paths:
       - coverage/
 
-test:nodejs-6.10:
+uTests:node-6.10:
   <<: *test_definition
   image: node:6.10
 
-test:nodejs-4.8:
+uTests:node-4.8:
   <<: *test_definition
   image: node:4.8
 
-lint:
+Lint & Security checks:
   image: node:latest
   stage: test
   script:
@@ -49,7 +49,20 @@ lint:
     - develop
     - master
 
-doc_and_analysis:
+Check Package Version:
+  image: node:latest
+  stage: test
+  script:
+    - npm i --production
+    - yarn check-version
+  tags:
+    - docker
+  only:
+    - /release\/.*$/
+    - /hotfix\/.*$/
+    - tags
+
+Build Doc & Analysis:
   image: node:latest
   stage: build
   script:
@@ -69,8 +82,8 @@ doc_and_analysis:
 pages:
   stage: deploy
   dependencies:
-    - test:nodejs-latest
-    - doc_and_analysis
+    - uTests:node-latest
+    - Build Doc & Analysis
   script:
     - npm i -g indexifier
     - mkdir public/ public/jsdoc/ public/plato/ public/coverage/

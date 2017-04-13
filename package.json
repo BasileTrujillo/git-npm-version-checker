@@ -6,7 +6,8 @@
   "scripts": {
     "test": "dotbox test",
     "lint": "dotbox lint",
-    "build": "dotbox build"
+    "build": "dotbox build",
+    "check-version": "node ./cli.js -v"
   },
   "bin": {
     "git-npm-version-checker": "./cli.js",
