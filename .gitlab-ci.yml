@@ -48,6 +48,7 @@ Lint & Security checks:
   except:
     - develop
     - master
+    - tags
 
 Check Package Version:
   image: node:latest
