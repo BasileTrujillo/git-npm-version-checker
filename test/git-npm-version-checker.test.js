@@ -8,6 +8,7 @@ const expect = chai.expect;
 const proxyquire = require('proxyquire').noPreserveCache();
 const fakeVersion = '1.0.0';
 const branchNamesThatShouldPassed = [
+  fakeVersion,
   'tags/' + fakeVersion,
   'heads/release/' + fakeVersion,
   'refs/heads/release/' + fakeVersion,
