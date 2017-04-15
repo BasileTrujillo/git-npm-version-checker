@@ -1,13 +1,13 @@
 # Git NPM Version Checker
 
-[![build status](https://gitlab.com/L0gIn/git-npm-version-checker/badges/master/build.svg)](https://gitlab.com/L0gIn/git-npm-version-checker/commits/master)
 [![NPM Badge](https://img.shields.io/npm/v/git-npm-version-checker.svg)](https://www.npmjs.com/package/git-npm-version-checker)
-[![coverage report](https://img.shields.io/badge/link-coverage-green.svg)](https://l0gin.gitlab.io/git-npm-version-checker/coverage)
-[![JsDoc report](https://img.shields.io/badge/link-jsdoc-green.svg)](https://l0gin.gitlab.io/git-npm-version-checker/jsdoc)
-[![Plato report](https://img.shields.io/badge/link-plato-green.svg)](https://l0gin.gitlab.io/git-npm-version-checker/plato)
+[![build status](https://gitlab.com/L0gIn/git-npm-version-checker/badges/master/build.svg)](https://gitlab.com/L0gIn/git-npm-version-checker/commits/master)
+[![coverage report](https://gitlab.com/L0gIn/git-npm-version-checker/badges/master/coverage.svg)](https://l0gin.gitlab.io/git-npm-version-checker/coverage)
+[![JsDoc report](https://img.shields.io/badge/jsdoc-link-green.svg)](https://l0gin.gitlab.io/git-npm-version-checker/jsdoc)
+[![Plato report](https://img.shields.io/badge/plato-link-green.svg)](https://l0gin.gitlab.io/git-npm-version-checker/plato)
 
-Git NPM Version Checker is a CLI tool to check your NPM package.json's version and your git branch version.
-Exemple: If your package.json is in version 1.0.0 and your current git branch called hotfix/1.0.1 or release/1.1.0, then git-npm-version-checker will alert you that package.json is not up to date.
+Git NPM Version Checker is a CLI tool to check your NPM `package.json`'s version and your git branch version.
+Example: If your `package.json` is in version `1.0.0` and your current git branch called `hotfix/1.0.1` or `release/1.1.0`, then `git-npm-version-checker` will alert you that `package.json` is not up to date.
 
 This work with hotfix/* , release/*, tags/*
 
