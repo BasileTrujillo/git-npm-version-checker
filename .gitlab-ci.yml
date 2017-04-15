@@ -17,7 +17,7 @@ stages:
     - yarn test
   tags:
     - docker
-  coverage: '/^Statements\s*:\s*([^%]+)/'
+  coverage: '/Statements\s*:\s*([^%]+)/'
 ###################################
 
 ############ CI ############
