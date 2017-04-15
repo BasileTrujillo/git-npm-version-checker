@@ -1,6 +1,6 @@
 {
   "name": "git-npm-version-checker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Git NPM Version Checker is a CLI tool to check your NPM package.json's version and your git branch version.",
   "main": "index.js",
   "scripts": {
