@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
+    "chai-as-promised": "^7.1.1",
     "devops-toolbox": "^1.5.0",
     "eslint": "3.12.0",
     "eslint-config-exaprint": "latest",
